@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
+import Button from './components/Button';
 import NavBar from './components/NavBar';
-
 import logo from './logo.svg';
 
 class App extends React.Component<any, any> {
@@ -34,6 +34,7 @@ class App extends React.Component<any, any> {
           <p>{this.state.date.toLocaleTimeString()}</p>
         </header>
         <NavBar text="React & Material-UI" />
+        <Button />
       </div>
     );
   }
