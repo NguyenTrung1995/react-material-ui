@@ -1,33 +1,31 @@
 import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
 import DeleteIcon from '@material-ui/icons/Delete';
 import * as React from 'react';
 
-const styles = theme => ({
+const styles = {
     button: {
-      margin: theme.spacing.unit,
+      margin: 10,
     },
     leftIcon: {
-      marginRight: theme.spacing.unit,
+      marginRight: 8,
     },
     rightIcon: {
-      marginLeft: theme.spacing.unit,
+      marginLeft: 8,
     },
     iconSmall: {
       fontSize: 20,
     },
-  });
+};
 
 class Buttons extends React.Component<any, any> {
     public render() {
-        const { classes } = this.props;
         return (
-            <Button variant="contained" color="secondary" className={classes.button}>
+            <Button variant="contained" color="secondary" style={styles.button}>
                 Delete
-                <DeleteIcon className={classes.rightIcon} />
+                <DeleteIcon style={styles.rightIcon}/>
             </Button>
         );
     }
 }
 
-export default withStyles(styles)(Buttons);
+export default Buttons;
